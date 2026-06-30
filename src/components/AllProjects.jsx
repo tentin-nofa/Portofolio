@@ -13,7 +13,6 @@ export default function AllProjects() {
         Back to Portfolio
       </a>
 
-      <p className="eyebrow">▦ Full Archive</p>
       <h2
         style={{
           fontFamily: 'var(--font-display)',
@@ -24,8 +23,7 @@ export default function AllProjects() {
         All Projects
       </h2>
       <p style={{ color: 'var(--text-dim)', maxWidth: 560 }}>
-        Every build, big or small — click a project to open its repository on
-        GitHub.
+        Click Project and you will be directed to the GitHub repository
       </p>
 
       <div className="all-projects-grid">
@@ -56,6 +54,8 @@ export default function AllProjects() {
                 ))}
               </div>
               <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+              {p.stack && <p className="stack-line">Stack: {p.stack}</p>}
             </div>
           </a>
         ))}

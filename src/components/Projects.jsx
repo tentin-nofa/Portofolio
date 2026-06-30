@@ -4,9 +4,9 @@ import ProjectIcon from './ProjectIcon.jsx'
 
 export default function Projects() {
   const previewIds = ['smart-attendance', 'mathking', 'ai-risk-audit', 'tax-consultant']
-const preview = previewIds
-  .map((id) => projects.find((p) => p.id === id))
-  .filter(Boolean)
+  const preview = previewIds
+    .map((id) => projects.find((p) => p.id === id))
+    .filter(Boolean)
 
   const goToAllProjects = () => {
     window.location.hash = '/projects'
@@ -53,6 +53,8 @@ const preview = previewIds
                 ))}
               </div>
               <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+              {p.stack && <p className="stack-line">Stack: {p.stack}</p>}
             </div>
           </a>
         ))}

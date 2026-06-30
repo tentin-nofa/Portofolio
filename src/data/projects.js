@@ -4,6 +4,7 @@ import boireMilkbarImg from '../assets/boire-milkbar.jpg'
 import libraryBorrowImg from '../assets/library-borrow.jpg'
 import hotelBookingImg from '../assets/hotel-booking.jpg'
 import mathKingImg from '../assets/mathking.jpg'
+import thisWebsiteImg from '../assets/this-website.jpg'
 
 export const projects = [
   {
@@ -11,6 +12,7 @@ export const projects = [
     title: 'Smart Attendance System',
     tags: ['Python & OpenCV', 'AI / Biometric'],
     desc: 'Face Recognition-Based Attendance using Haar Cascade for real-time detection and LBPH Face Recognizer for identification.',
+    stack: 'Python, OpenCV, Haar Cascade, LBPH',
     github: 'https://github.com/tentin-nofa/Smart-Attendance-System.git',
     iconColor: '#ec5ec0',
     thumbBg: null,
@@ -22,6 +24,7 @@ export const projects = [
     title: 'Tax Consultant Website',
     tags: ['Website'],
     desc: 'Landing page for a tax consulting business with service highlights and a free consultation call-to-action.',
+    stack: 'HTML, CSS, JavaScript',
     github: 'https://github.com/tentin-nofa/Tax-Consultant-Website.git',
     iconColor: '#ec5ec0',
     thumbBg: null,
@@ -33,6 +36,7 @@ export const projects = [
     title: 'Config & Cisco Hardening',
     tags: ['Network Security'],
     desc: 'Designed and hardened network configurations across segmented topologies using Cisco devices.',
+    stack: 'Cisco IOS, Packet Tracer',
     github: 'https://github.com/tentin-nofa',
     iconColor: '#7c4ddb',
     thumbBg: '#f4f4f6',
@@ -43,6 +47,7 @@ export const projects = [
     title: 'Boire Milkbar',
     tags: ['Mobile App'],
     desc: 'Mobile ordering app concept for a coffee & milk tea brand, with category browsing and daily specials.',
+    stack: 'Flutter, Dart',
     github: 'https://github.com/tentin-nofa/Boire-Milkbar.git',
     iconColor: '#ec5ec0',
     thumbBg: null,
@@ -54,6 +59,7 @@ export const projects = [
     title: 'Library Borrow System',
     tags: ['Website'],
     desc: 'PHP/Laravel-based web app for browsing, recommending, and borrowing books online.',
+    stack: 'PHP, Laravel, MySQL',
     github: 'https://github.com/tentin-nofa/Library-Borrow-System.git',
     iconColor: '#7c4ddb',
     thumbBg: null,
@@ -66,6 +72,7 @@ export const projects = [
     title: 'AI Cybersecurity Risk Audit Platform',
     tags: ['Website', 'AI / Security Audit'],
     desc: 'Risk assessment and security audit platform based on NIST CSF and OWASP Top 10, with Ollama AI (LLaMA 3) generating management-friendly vulnerability explanations and PDF audit reports.',
+    stack: 'Python, Ollama (LLaMA 3), NIST CSF, OWASP Top 10',
     github: 'https://github.com/tentin-nofa',
     iconColor: '#ec5ec0',
     thumbBg: null,
@@ -76,6 +83,7 @@ export const projects = [
     title: 'Hotel Booking Management System',
     tags: ['Website'],
     desc: 'Booking management system for handling hotel reservations, room availability, and guest data.',
+    stack: 'PHP, MySQL',
     github: 'https://github.com/tentin-nofa/Hotel-Booking-Management-System.git',
     iconColor: '#7c4ddb',
     thumbBg: null,
@@ -87,10 +95,23 @@ export const projects = [
     title: 'MathKing Statistics Calculator',
     tags: ['Website'],
     desc: 'Statistics calculator covering basic statistics, probability distributions, inferential statistics, regression, and data visualization.',
+    stack: 'JavaScript, HTML, CSS',
     github: 'https://mathking.vercel.app/',
     iconColor: '#ec5ec0',
     thumbBg: null,
     icon: 'columns',
     thumbImg: mathKingImg,
+  },
+  {
+    id: 'this-website',
+    title: 'This Website',
+    tags: ['Website'],
+    desc: 'My own personal portfolio site, built to showcase projects, skills, and CTF achievements with a modern dark UI.',
+    stack: 'React, Vite, CSS',
+    github: 'https://github.com/tentin-nofa/Portofolio.git',
+    iconColor: '#ec5ec0',
+    thumbBg: null,
+    icon: 'columns',
+    thumbImg: thisWebsiteImg,
   },
 ]

@@ -364,13 +364,32 @@ img { max-width: 100%; display: block; }
   width: 220px;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 1px solid var(--card-border);
+  border: 1.5px solid var(--purple);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 0 18px rgba(124, 77, 219, 0.35);
 }
+
+.skill-orb::before,
+.skill-orb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(124, 77, 219, 0.6);
+  animation: orb-radar 3.2s ease-out infinite;
+  pointer-events: none;
+}
+.skill-orb::after { animation-delay: 1.6s; }
 .skill-orb svg { width: 92%; height: 92%; }
+.skill-orb-img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
 
 .toolbar {
   display: flex;
@@ -450,6 +469,12 @@ img { max-width: 100%; display: block; }
   color: var(--text-dim);
   font-size: 0.88rem;
   margin-top: 0.5rem;
+}
+.project-body .stack-line {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  margin-top: 0.6rem;
 }
 
 /* All-projects standalone page */
