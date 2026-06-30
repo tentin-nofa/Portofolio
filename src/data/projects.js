@@ -5,6 +5,8 @@ import libraryBorrowImg from '../assets/library-borrow.jpg'
 import hotelBookingImg from '../assets/hotel-booking.jpg'
 import mathKingImg from '../assets/mathking.jpg'
 import thisWebsiteImg from '../assets/this-website.jpg'
+import aiRiskAuditImg from '../assets/ai-risk-audit.jpg'
+import ciscoHardeningImg from '../assets/cisco-hardening.jpg'
 
 export const projects = [
   {
@@ -39,8 +41,9 @@ export const projects = [
     stack: 'Cisco IOS, Packet Tracer',
     github: 'https://github.com/tentin-nofa',
     iconColor: '#7c4ddb',
-    thumbBg: '#f4f4f6',
+    thumbBg: null,
     icon: 'network',
+    thumbImg: ciscoHardeningImg,
   },
   {
     id: 'boire-milkbar',
@@ -77,6 +80,7 @@ export const projects = [
     iconColor: '#ec5ec0',
     thumbBg: null,
     icon: 'check-circle',
+    thumbImg: aiRiskAuditImg,
   },
   {
     id: 'hotel-booking',
