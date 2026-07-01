@@ -5,6 +5,7 @@ const links = [
   { id: 'awards', label: 'Awards' },
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -42,9 +43,6 @@ export default function Navbar() {
           </a>
         ))}
       </div>
-      <a href="#contact" className="nav-cta">
-        Contact
-      </a>
     </nav>
   )
 }
