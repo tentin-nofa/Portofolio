@@ -17,7 +17,7 @@ const education = [
 ]
 
 const pillsLeft = ['Network Security (Cisco)', 'Linux (Ubuntu/Kali)', 'Web Application Pentesting']
-const pillsRight = ['Python', 'PHP / Laravel', 'Database (MySQL)']
+const pillsRight = ['Python', 'PHP / Laravel', 'HTML/CSS', 'React']
 const toolbar = ['OWASP Juice Shop', 'C++ / Java', 'Lua', 'Git / GitHub', 'JavaScript']
 
 export default function Skills() {
