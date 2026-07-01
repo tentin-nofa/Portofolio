@@ -17,6 +17,14 @@ export default function Navbar() {
       .filter(Boolean)
 
     const onScroll = () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4
+
+      if (nearBottom) {
+        setActive('contact')
+        return
+      }
+
       let current = 'home'
       sections.forEach((sec) => {
         const top = sec.offsetTop - 120
