@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { projects } from '../data/projects.js'
 import ProjectIcon from './ProjectIcon.jsx'
 import Footer from './Footer.jsx'
 
+const filters = [
+  { id: 'all', label: 'All' },
+  { id: 'project', label: 'Projects' },
+  { id: 'event', label: 'Events' },
+  { id: 'report', label: 'Reports' },
+]
+
 export default function AllProjects() {
+  const [filter, setFilter] = useState('all')
+
+  const visible = projects.filter(
+    (p) => filter === 'all' || (p.category || 'project') === filter
+  )
+
   return (
     <div className="all-projects-page">
       <a className="back-link" href="#home">
@@ -20,14 +33,27 @@ export default function AllProjects() {
           margin: '0.6rem 0',
         }}
       >
-        All Projects
+        Builds, Battles & Reports
       </h2>
       <p style={{ color: 'var(--text-dim)', maxWidth: 560 }}>
-        Click Project and you will be directed to the GitHub repository
+        Projects I've built, events I've joined, and reports I've written — click any
+        card to see the repository, certificate, or full report.
       </p>
 
+      <div className="filter-tabs">
+        {filters.map((f) => (
+          <button
+            key={f.id}
+            className={`filter-tab${filter === f.id ? ' active' : ''}`}
+            onClick={() => setFilter(f.id)}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
       <div className="all-projects-grid">
-        {projects.map((p) => (
+        {visible.map((p) => (
           <a
             className={`project-card${p.wide ? ' wide' : ''}`}
             href={p.github}
@@ -56,6 +82,7 @@ export default function AllProjects() {
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
               {p.stack && <p className="stack-line">Stack: {p.stack}</p>}
+              {p.linkLabel && <p className="link-label">{p.linkLabel} →</p>}
             </div>
           </a>
         ))}

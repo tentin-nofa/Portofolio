@@ -11,6 +11,7 @@ import ciscoHardeningImg from '../assets/cisco-hardening.jpg'
 export const projects = [
   {
     id: 'smart-attendance',
+    category: 'project',
     title: 'Smart Attendance System',
     tags: ['Python & OpenCV', 'AI / Biometric'],
     desc: 'Face Recognition-Based Attendance using Haar Cascade for real-time detection and LBPH Face Recognizer for identification.',
@@ -23,6 +24,7 @@ export const projects = [
   },
   {
     id: 'tax-consultant',
+    category: 'project',
     title: 'Tax Consultant Website',
     tags: ['Website'],
     desc: 'Landing page for a tax consulting business with service highlights and a free consultation call-to-action.',
@@ -35,6 +37,7 @@ export const projects = [
   },
   {
     id: 'cisco-hardening',
+    category: 'project',
     title: 'Config & Cisco Hardening',
     tags: ['Network Security'],
     desc: 'Designed and hardened network configurations across segmented topologies using Cisco devices.',
@@ -47,6 +50,7 @@ export const projects = [
   },
   {
     id: 'boire-milkbar',
+    category: 'project',
     title: 'Boire Milkbar',
     tags: ['Mobile App'],
     desc: 'Mobile ordering app concept for a coffee & milk tea brand, with category browsing and daily specials.',
@@ -59,6 +63,7 @@ export const projects = [
   },
   {
     id: 'library-borrow',
+    category: 'project',
     title: 'Library Borrow System',
     tags: ['Website'],
     desc: 'PHP/Laravel-based web app for browsing, recommending, and borrowing books online.',
@@ -72,6 +77,7 @@ export const projects = [
   },
   {
     id: 'ai-risk-audit',
+    category: 'project',
     title: 'AI Cybersecurity Risk Audit Platform',
     tags: ['Website', 'AI / Security Audit'],
     desc: 'Risk assessment and security audit platform based on NIST CSF and OWASP Top 10, with Ollama AI (LLaMA 3) generating management-friendly vulnerability explanations and PDF audit reports.',
@@ -84,6 +90,7 @@ export const projects = [
   },
   {
     id: 'hotel-booking',
+    category: 'project',
     title: 'Hotel Booking Management System',
     tags: ['Website'],
     desc: 'Booking management system for handling hotel reservations, room availability, and guest data.',
@@ -96,6 +103,7 @@ export const projects = [
   },
   {
     id: 'mathking',
+    category: 'project',
     title: 'MathKing Statistics Calculator',
     tags: ['Website'],
     desc: 'Statistics calculator covering basic statistics, probability distributions, inferential statistics, regression, and data visualization.',
@@ -108,6 +116,7 @@ export const projects = [
   },
   {
     id: 'this-website',
+    category: 'project',
     title: 'This Website',
     tags: ['Website'],
     desc: 'My own personal portfolio site, built to showcase projects, skills, and CTF achievements with a modern dark UI.',
@@ -118,4 +127,36 @@ export const projects = [
     icon: 'columns',
     thumbImg: thisWebsiteImg,
   },
+
+  // ---- EVENT example (replace with your real events, or delete) ----
+  // {
+  //   id: 'pu-ctf-2026',
+  //   category: 'event',
+  //   title: 'PU CTF 2026 — Ethical Hacking Track',
+  //   tags: ['CTF', 'Event'],
+  //   desc: 'Participated in a 24-hour ethical hacking competition, ranked 16th out of 38 teams.',
+  //   stack: 'Digital Forensics, OSINT',
+  //   github: 'https://your-event-link-or-certificate.pdf',
+  //   linkLabel: 'View Certificate',
+  //   iconColor: '#7c4ddb',
+  //   thumbBg: null,
+  //   icon: 'check-circle',
+  //   thumbImg: null,
+  // },
+
+  // ---- REPORT example (replace with your real report, or delete) ----
+  // {
+  //   id: 'network-security-audit-report',
+  //   category: 'report',
+  //   title: 'Network Security Audit Report',
+  //   tags: ['Report', 'Network Security'],
+  //   desc: 'Vulnerability assessment and hardening recommendations for a segmented enterprise network topology.',
+  //   stack: 'Cisco IOS, NIST CSF',
+  //   github: '/reports/network-security-audit.pdf', // put the PDF in your public/reports folder
+  //   linkLabel: 'Read Report',
+  //   iconColor: '#ec5ec0',
+  //   thumbBg: null,
+  //   icon: 'check-circle',
+  //   thumbImg: null,
+  // },
 ]

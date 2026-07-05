@@ -7,7 +7,10 @@ export default function Footer() {
         <div className="foot-name">Tentin Nofa Tuzika</div>
         <div className="copyright">© 2026 Tentin Nofa Tuzika. All rights reserved.</div>
       </div>
-      <span className="status-chip">Status: Ready to Deploy</span>
+      <span className="status-chip">
+        <span className="status-dot"></span>
+        Status: Ready for Internship
+      </span>
     </footer>
   )
 }

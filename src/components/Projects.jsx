@@ -16,9 +16,9 @@ export default function Projects() {
     <section className="section" id="projects">
       <div className="projects-head">
         <div>
-          <p className="eyebrow">▦ Recent Projects</p>
+          <p className="eyebrow">▦ Activity Log</p>
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', margin: '0.6rem 0 0' }}>
-            Experience & Technical Builds
+            Builds, Battles & Reports
           </h2>
         </div>
         <button className="view-all" onClick={goToAllProjects}>
@@ -55,6 +55,7 @@ export default function Projects() {
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
               {p.stack && <p className="stack-line">Stack: {p.stack}</p>}
+              {p.linkLabel && <p className="link-label">{p.linkLabel} →</p>}
             </div>
           </a>
         ))}
