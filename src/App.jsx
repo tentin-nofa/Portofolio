@@ -22,6 +22,17 @@ export default function App() {
   }, [])
 
   useEffect(() => {
+    if (route === 'home') {
+      const id = window.location.hash.replace('#', '')
+      const el = id && document.getElementById(id)
+      if (el) {
+        // Wait a tick so the homepage sections are mounted before scrolling
+        requestAnimationFrame(() => {
+          el.scrollIntoView()
+        })
+        return
+      }
+    }
     window.scrollTo(0, 0)
   }, [route])
 
