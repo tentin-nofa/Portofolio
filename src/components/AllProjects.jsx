@@ -39,14 +39,8 @@ export default function AllProjects() {
       </div>
 
       <div className="all-projects-grid">
-        {visible.map((p) => (
-          <a
-            className={`project-card${p.wide ? ' wide' : ''}`}
-            href={p.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={p.id}
-          >
+        {visible.map((p) => {
+          const thumb = (
             <div
               className={`project-thumb${p.thumbImg ? '' : ' has-icon'}`}
               style={p.thumbBg ? { background: p.thumbBg } : undefined}
@@ -57,6 +51,9 @@ export default function AllProjects() {
                 <ProjectIcon name={p.icon} color={p.iconColor} size={60} />
               )}
             </div>
+          )
+
+          const body = (
             <div className="project-body">
               <div className="tags">
                 {p.tags.map((t) => (
@@ -68,10 +65,48 @@ export default function AllProjects() {
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
               {p.stack && <p className="stack-line">Stack: {p.stack}</p>}
-              {p.linkLabel && <p className="link-label">{p.linkLabel} →</p>}
+              {p.linkLabel && !p.links && <p className="link-label">{p.linkLabel} →</p>}
+              {p.links && (
+                <div className="report-links">
+                  {p.links.map((l) => (
+                    <a
+                      className="report-link-btn"
+                      href={l.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      key={l.label}
+                    >
+                      {l.label} →
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
-          </a>
-        ))}
+          )
+
+          // Multiple links: render as a div (not a single wrapping <a>)
+          if (p.links) {
+            return (
+              <div className={`project-card${p.wide ? ' wide' : ''}`} key={p.id}>
+                {thumb}
+                {body}
+              </div>
+            )
+          }
+
+          return (
+            <a
+              className={`project-card${p.wide ? ' wide' : ''}`}
+              href={p.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={p.id}
+            >
+              {thumb}
+              {body}
+            </a>
+          )
+        })}
       </div>
 
       <Footer />

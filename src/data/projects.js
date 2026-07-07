@@ -7,6 +7,7 @@ import mathKingImg from '../assets/mathking.jpg'
 import thisWebsiteImg from '../assets/this-website.jpg'
 import aiRiskAuditImg from '../assets/ai-risk-audit.jpg'
 import ciscoHardeningImg from '../assets/cisco-hardening.jpg'
+import netAwareImg from '../assets/net-aware.jpg'
 
 export const projects = [
   {
@@ -77,7 +78,7 @@ export const projects = [
   },
   {
     id: 'ai-risk-audit',
-    category: 'project',
+    category: 'report',
     title: 'AI Cybersecurity Risk Audit Platform',
     tags: ['Website', 'AI / Security Audit'],
     desc: 'Risk assessment and security audit platform based on NIST CSF and OWASP Top 10, with Ollama AI (LLaMA 3) generating management-friendly vulnerability explanations and PDF audit reports.',
@@ -128,35 +129,35 @@ export const projects = [
     thumbImg: thisWebsiteImg,
   },
 
-  // ---- EVENT example (replace with your real events, or delete) ----
-  // {
-  //   id: 'pu-ctf-2026',
-  //   category: 'event',
-  //   title: 'PU CTF 2026 — Ethical Hacking Track',
-  //   tags: ['CTF', 'Event'],
-  //   desc: 'Participated in a 24-hour ethical hacking competition, ranked 16th out of 38 teams.',
-  //   stack: 'Digital Forensics, OSINT',
-  //   github: 'https://your-event-link-or-certificate.pdf',
-  //   linkLabel: 'View Certificate',
-  //   iconColor: '#7c4ddb',
-  //   thumbBg: null,
-  //   icon: 'check-circle',
-  //   thumbImg: null,
-  // },
-
-  // ---- REPORT example (replace with your real report, or delete) ----
-  // {
-  //   id: 'network-security-audit-report',
-  //   category: 'report',
-  //   title: 'Network Security Audit Report',
-  //   tags: ['Report', 'Network Security'],
-  //   desc: 'Vulnerability assessment and hardening recommendations for a segmented enterprise network topology.',
-  //   stack: 'Cisco IOS, NIST CSF',
-  //   github: '/reports/network-security-audit.pdf', // put the PDF in your public/reports folder
-  //   linkLabel: 'Read Report',
-  //   iconColor: '#ec5ec0',
-  //   thumbBg: null,
-  //   icon: 'check-circle',
-  //   thumbImg: null,
-  // },
+  // ---- Reports ----
+  {
+    id: 'network-security-report',
+    category: 'report',
+    title: 'Network Security Report',
+    tags: ['Report', 'Network Security'],
+    desc: 'Vulnerability assessment and hardening analysis report completed for the Network Security course.',
+    stack: null,
+    github: '/reports/Network%20Security.pdf',
+    linkLabel: 'View Report',
+    iconColor: '#ec5ec0',
+    thumbBg: null,
+    icon: 'check-circle',
+    thumbImg: null,
+  },
+  {
+    id: 'survival-economic-report',
+    category: 'report',
+    title: 'Building a Responsible Digital Generation',
+    tags: ['Report', 'Survival Economic'],
+    desc: 'Proposal and final report analyzing survival economics scenarios, submitted for Class 4, Group 1.',
+    stack: null,
+    iconColor: '#7c4ddb',
+    thumbBg: null,
+    icon: 'check-circle',
+    thumbImg: netAwareImg,
+    links: [
+      { label: 'View Proposal', url: '/reports/M%20IT-2024%20CLASS%204%20-%20GROUP%201%20-%20PROPOSAL.pdf' },
+      { label: 'View Report', url: '/reports/M%20IT-2024%20CLASS%204%20-%20GROUP%201%20-%20REPORT.pdf' },
+    ],
+  },
 ]

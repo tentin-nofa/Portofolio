@@ -579,6 +579,28 @@ img { max-width: 100%; display: block; }
   margin-top: 0.6rem;
 }
 
+.report-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+.report-link-btn {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  color: var(--pink);
+  border: 1px solid var(--card-border);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.report-link-btn:hover {
+  color: #fff;
+  background: var(--gradient);
+  border-color: transparent;
+}
+
 /* All-projects standalone page */
 .all-projects-page {
   min-height: 100vh;
