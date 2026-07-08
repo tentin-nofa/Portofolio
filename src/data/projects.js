@@ -8,6 +8,10 @@ import thisWebsiteImg from '../assets/this-website.jpg'
 import aiRiskAuditImg from '../assets/ai-risk-audit.jpg'
 import ciscoHardeningImg from '../assets/cisco-hardening.jpg'
 import netAwareImg from '../assets/net-aware.jpg'
+import nexusIqImg from '../assets/nexus-iq.png'
+import biogenTechnologyImg from '../assets/biogen-technology.jpg'
+import menstrualTrackerImg from '../assets/menstrual-tracker.png'
+import skillbridgeImg from '../assets/skillbridge.png'
 
 export const projects = [
   {
@@ -35,19 +39,6 @@ export const projects = [
     thumbBg: null,
     icon: 'columns',
     thumbImg: taxConsultantImg,
-  },
-  {
-    id: 'cisco-hardening',
-    category: 'project',
-    title: 'Config & Cisco Hardening',
-    tags: ['Network Security'],
-    desc: 'Designed and hardened network configurations across segmented topologies using Cisco devices.',
-    stack: 'Cisco IOS, Packet Tracer',
-    github: 'https://github.com/tentin-nofa',
-    iconColor: '#7c4ddb',
-    thumbBg: null,
-    icon: 'network',
-    thumbImg: ciscoHardeningImg,
   },
   {
     id: 'boire-milkbar',
@@ -83,7 +74,8 @@ export const projects = [
     tags: ['Website', 'AI / Security Audit'],
     desc: 'Risk assessment and security audit platform based on NIST CSF and OWASP Top 10, with Ollama AI (LLaMA 3) generating management-friendly vulnerability explanations and PDF audit reports.',
     stack: 'Python, Ollama (LLaMA 3), NIST CSF, OWASP Top 10',
-    github: 'https://github.com/tentin-nofa',
+    github: '/reports/ai-cybersecurity-risk-audit-report.pdf',
+    linkLabel: 'View Report',
     iconColor: '#ec5ec0',
     thumbBg: null,
     icon: 'check-circle',
@@ -129,21 +121,34 @@ export const projects = [
     thumbImg: thisWebsiteImg,
   },
 
-  // ---- Reports ----
   {
-    id: 'network-security-report',
-    category: 'report',
-    title: 'Network Security Report',
-    tags: ['Report', 'Network Security'],
-    desc: 'Vulnerability assessment and hardening analysis report completed for the Network Security course.',
-    stack: null,
-    github: '/reports/Network%20Security.pdf',
-    linkLabel: 'View Report',
+    id: 'ai-camera-root-cause',
+    category: 'project',
+    title: 'AI-Based Camera for Root Cause Analysis',
+    tags: ['Website', 'AI / Industrial Monitoring'],
+    desc: 'Industrial AI monitoring platform (Nexus IQ) featuring real-time OEE tracking, predictive maintenance, and AI-driven anomaly and root-cause detection across multi-plant operations.',
+    stack: 'React, TypeScript, Vite, Supabase',
+    github: 'https://github.com/tentin-nofa/AI-Camera-Root-Cause-Analysis.git',
+    iconColor: '#7c4ddb',
+    thumbBg: null,
+    icon: 'camera',
+    thumbImg: nexusIqImg,
+  },
+  {
+    id: 'skillbridge',
+    category: 'project',
+    title: 'SkillBridge',
+    tags: ['Website'],
+    desc: 'A community platform for skill-swapping, connecting people to learn from each other, request skill swaps, join forum discussions, and grow together.',
+    stack: 'React, TypeScript',
+    github: 'https://skillbridge-tech.my.id/',
     iconColor: '#ec5ec0',
     thumbBg: null,
-    icon: 'check-circle',
-    thumbImg: null,
+    icon: 'columns',
+    thumbImg: skillbridgeImg,
   },
+
+  // ---- Reports ----
   {
     id: 'survival-economic-report',
     category: 'report',
@@ -158,6 +163,51 @@ export const projects = [
     links: [
       { label: 'View Proposal', url: '/reports/M%20IT-2024%20CLASS%204%20-%20GROUP%201%20-%20PROPOSAL.pdf' },
       { label: 'View Report', url: '/reports/M%20IT-2024%20CLASS%204%20-%20GROUP%201%20-%20REPORT.pdf' },
+    ],
+  },
+  {
+    id: 'biogen-technology-report',
+    category: 'report',
+    title: 'BioGen Technology',
+    tags: ['Report', 'Network Security'],
+    desc: 'Network security analysis and design for a biotechnology organization, covering VLAN segmentation, IP addressing, access control, and threat mitigation for the Cyber Security Fundamentals course.',
+    stack: null,
+    github: '/reports/biogen-technology-report.pdf',
+    linkLabel: 'View Report',
+    iconColor: '#7c4ddb',
+    thumbBg: null,
+    icon: 'network',
+    thumbImg: biogenTechnologyImg,
+  },
+  {
+    id: 'cisco-hardening-report',
+    category: 'report',
+    title: 'Config & Cisco Hardening',
+    tags: ['Report', 'Network Security'],
+    desc: 'Designed and hardened network configurations across segmented topologies, including VLAN setup, trunking, DHCP pools, and static routing across multiple Cisco routers and switches.',
+    stack: null,
+    github: '/reports/config-and-cisco-hardening-report.pdf',
+    linkLabel: 'View Report',
+    iconColor: '#7c4ddb',
+    thumbBg: null,
+    icon: 'network',
+    thumbImg: ciscoHardeningImg,
+  },
+  {
+    id: 'menstrual-cycle-tracker-report',
+    category: 'report',
+    title: 'Menstrual Cycle Tracker and Reminder',
+    tags: ['Report', 'C++ / OOP'],
+    desc: 'Group project for the Programming Concept course: a C++ console application for tracking menstrual cycles, symptoms, moods, and ovulation predictions using OOP principles.',
+    stack: 'C++',
+    iconColor: '#ec5ec0',
+    thumbBg: null,
+    icon: 'check-circle',
+    thumbImg: menstrualTrackerImg,
+    links: [
+      { label: 'View Report 1', url: '/reports/menstrual-cycle-tracker-project1.pdf' },
+      { label: 'View Report 2', url: '/reports/menstrual-cycle-tracker-project2.pdf' },
+      { label: 'View Report 3', url: '/reports/menstrual-cycle-tracker-project3.pdf' },
     ],
   },
 ]

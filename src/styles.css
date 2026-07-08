@@ -323,6 +323,42 @@ img { max-width: 100%; display: block; }
   opacity: 1;
 }
 
+/* ---------- Mouse-follow purple spotlight effect ---------- */
+.card-spotlight {
+  --mx: 50%;
+  --my: 50%;
+}
+
+.card-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.spotlight-layer {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    280px circle at var(--mx) var(--my),
+    rgba(124, 77, 219, 0.45),
+    rgba(236, 94, 192, 0.22) 35%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+}
+
+.card-spotlight:hover .spotlight-layer {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .spotlight-layer { display: none; }
+}
+
 @keyframes fluid-morph {
   0%, 100% {
     border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;

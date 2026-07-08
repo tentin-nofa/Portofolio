@@ -6,8 +6,7 @@ import Footer from './Footer.jsx'
 const filters = [
   { id: 'all', label: 'All' },
   { id: 'project', label: 'Projects' },
-  { id: 'event', label: 'Events' },
-  { id: 'report', label: 'Reports' },
+  { id: 'report', label: 'Academic Reports' },
 ]
 
 export default function AllProjects() {
