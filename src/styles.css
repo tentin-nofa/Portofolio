@@ -656,12 +656,21 @@ img { max-width: 100%; display: block; }
 }
 .back-link:hover { color: var(--pink); }
 .all-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
+  column-count: 3;
+  column-gap: 1.6rem;
   margin-top: 2.5rem;
-  align-items: start;
 }
+.all-projects-grid .project-card {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.6rem;
+  vertical-align: top;
+}
+/* Note: intentionally NOT using column-span: all for .wide cards here —
+   it causes large empty gaps with CSS multi-column masonry layouts.
+   Wide cards just render as normal single-column cards on this page. */
 
 /* ---------- CONTACT ---------- */
 .contact-section {
@@ -753,7 +762,7 @@ footer .copyright { color: var(--text-faint); font-size: 0.85rem; margin-top: 0.
   .skills-grid { grid-template-columns: 1fr; }
   .skill-pills { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
-  .all-projects-grid { grid-template-columns: 1fr 1fr; }
+  .all-projects-grid { column-count: 2; }
 }
 
 @media (max-width: 640px) {
@@ -764,7 +773,7 @@ footer .copyright { color: var(--text-faint); font-size: 0.85rem; margin-top: 0.
   .nav-toggle { display: none; }
   .nav-links-mobile { display: none !important; }
   .section { padding: 5rem 1.4rem; }
-  .all-projects-grid { grid-template-columns: 1fr; }
+  .all-projects-grid { column-count: 1; }
   footer { flex-direction: column; align-items: flex-start; }
 }
 
